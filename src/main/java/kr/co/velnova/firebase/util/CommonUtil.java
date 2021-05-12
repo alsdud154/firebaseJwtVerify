@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 
 public class CommonUtil {
 
-    static {}
-
     public static CurrentUser currentUser(){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
