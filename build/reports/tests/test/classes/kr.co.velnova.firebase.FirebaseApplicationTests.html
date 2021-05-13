@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.081s</div>
+<div class="counter">0.828s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,127 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="auth()"></a>
+<h3 class="failures">auth()</h3>
+<span class="code">
+<pre>com.google.firebase.auth.FirebaseAuthException: Firebase ID token has expired. Get a fresh ID token and try again. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+	at com.google.firebase.auth.FirebaseTokenVerifierImpl.newException(FirebaseTokenVerifierImpl.java:237)
+	at com.google.firebase.auth.FirebaseTokenVerifierImpl.newException(FirebaseTokenVerifierImpl.java:232)
+	at com.google.firebase.auth.FirebaseTokenVerifierImpl.checkContents(FirebaseTokenVerifierImpl.java:227)
+	at com.google.firebase.auth.FirebaseTokenVerifierImpl.verifyToken(FirebaseTokenVerifierImpl.java:100)
+	at com.google.firebase.auth.AbstractFirebaseAuth$3.execute(AbstractFirebaseAuth.java:305)
+	at com.google.firebase.auth.AbstractFirebaseAuth$3.execute(AbstractFirebaseAuth.java:302)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.auth.AbstractFirebaseAuth.verifyIdToken(AbstractFirebaseAuth.java:267)
+	at com.google.firebase.auth.AbstractFirebaseAuth.verifyIdToken(AbstractFirebaseAuth.java:241)
+	at kr.co.velnova.firebase.FirebaseApplicationTests.auth(FirebaseApplicationTests.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,21 +192,21 @@
 </tr>
 </thead>
 <tr>
-<td class="success">auth()</td>
-<td class="success">1.081s</td>
-<td class="success">passed</td>
+<td class="failures">auth()</td>
+<td class="failures">0.828s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2021-05-12 17:32:10.437  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [kr.co.velnova.firebase.FirebaseApplicationTests], using SpringBootContextLoader
-2021-05-12 17:32:10.452  INFO   --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [kr.co.velnova.firebase.FirebaseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-05-12 17:32:10.457  INFO   --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [kr.co.velnova.firebase.FirebaseApplicationTests]: FirebaseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2021-05-12 17:32:10.596  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration kr.co.velnova.firebase.FirebaseApplication for test class kr.co.velnova.firebase.FirebaseApplicationTests
-2021-05-12 17:32:10.717  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2021-05-12 17:32:10.736  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@419bc7f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@312a61bf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@281f2cdb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1967a987, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65c4107, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6499ffea, org.springframework.test.context.event.EventPublishingTestExecutionListener@35b16e56, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@113ec2f6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@758eedaf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5ec33a5b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@603e3c0b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7f07b88, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5910d4c]
+<pre>2021-05-13 12:41:01.557  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [kr.co.velnova.firebase.FirebaseApplicationTests], using SpringBootContextLoader
+2021-05-13 12:41:01.583  INFO   --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [kr.co.velnova.firebase.FirebaseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-05-13 12:41:01.586  INFO   --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [kr.co.velnova.firebase.FirebaseApplicationTests]: FirebaseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-05-13 12:41:01.833  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration kr.co.velnova.firebase.FirebaseApplication for test class kr.co.velnova.firebase.FirebaseApplicationTests
+2021-05-13 12:41:02.056  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-05-13 12:41:02.098  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@32a15fc0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7fdef6ff, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@109e4e33, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6b96d58c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@53f1d861, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5b90b5ee, org.springframework.test.context.event.EventPublishingTestExecutionListener@399d8779, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@647a1f73, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3995f14d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@67741c54, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3287f98c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6b2f928, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@10bb6f2a]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -102,14 +216,12 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.5)
 
-2021-05-12 17:32:11.088  INFO 55396 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : Starting FirebaseApplicationTests using Java 11.0.11 on NOTEBOOK-OHYOUNGWOOK.localdomain with PID 55396 (started by blocko in /Users/blocko/IdeaProjects/firebase)
-2021-05-12 17:32:11.089 DEBUG 55396 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-05-12 17:32:11.091  INFO 55396 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : No active profile set, falling back to default profiles: default
-2021-05-12 17:32:12.373  INFO 55396 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-05-12 17:32:12.742  INFO 55396 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : Started FirebaseApplicationTests in 1.953 seconds (JVM running for 3.887)
-bearerToken = eyJhbGciOiJSUzI1NiIsImtpZCI6IjUzNmRhZWFiZjhkZDY1ZDRkZTIxZTgyNGI4OTlhMWYzZGEyZjg5NTgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGlra2xlLWJmODZlIiwiYXVkIjoicGlra2xlLWJmODZlIiwiYXV0aF90aW1lIjoxNjIwODA2MTk0LCJ1c2VyX2lkIjoiYTNzdHMwQlNkS2FsRXY1WE5aQUE5OVNYMWx3MSIsInN1YiI6ImEzc3RzMEJTZEthbEV2NVhOWkFBOTlTWDFsdzEiLCJpYXQiOjE2MjA4MDYxOTUsImV4cCI6MTYyMDgwOTc5NSwiZW1haWwiOiJodW5AYWVyZ28uaW8iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiaHVuQGFlcmdvLmlvIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.JEP7vXgqs2zoChvRUDq2hJ8b38SXaPSsa4JDMcP3Cu079UEczfWjElDYGhpdGG0yp32gVMbG-dC5kkvTkkZAuVUNqdcquJ-LwcPeaz6wZ0pkVm2cbiZviGtn6WbRqi65W-JqOhvGYIhoxf7kSu4vqmhRiifduOJU4Hzo-39LExoYltcvQdNHrKgCWUy61ACuK2JXm41_Dul6ybpe-DC7r-27h59FyvrrEuEvNBsnc0vIIGVHCCgw7wmKu-nX00Oa2pYLLYlOoX9X3BEkaTs62yWMhSc3pegvNircY3IwVKF-MtwTQ-ztDuE4z25NuUX6RlphQ0teZ95hvG7MiV-YyQ
-claims = {aud=pikkle-bf86e, auth_time=1620806194, exp=1620809795, iat=1620806195, iss=https://securetoken.google.com/pikkle-bf86e, sub=a3sts0BSdKalEv5XNZAA99SX1lw1, user_id=a3sts0BSdKalEv5XNZAA99SX1lw1, email=hun@aergo.io, email_verified=false, firebase={identities={email=[hun@aergo.io]}, sign_in_provider=password}}
-uid = a3sts0BSdKalEv5XNZAA99SX1lw1
+2021-05-13 12:41:03.061  INFO 3696 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : Starting FirebaseApplicationTests using Java 11.0.11 on NOTEBOOK-OHYOUNGWOOK.localdomain with PID 3696 (started by blocko in /Users/blocko/IdeaProjects/firebaseJwtVerify)
+2021-05-13 12:41:03.089 DEBUG 3696 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-13 12:41:03.116  INFO 3696 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : No active profile set, falling back to default profiles: default
+2021-05-13 12:41:06.360  INFO 3696 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-13 12:41:07.317  INFO 3696 --- [    Test worker] k.c.v.firebase.FirebaseApplicationTests  : Started FirebaseApplicationTests in 5.142 seconds (JVM running for 7.323)
+bearerToken = eyJhbGciOiJSUzI1NiIsImtpZCI6IjUzNmRhZWFiZjhkZDY1ZDRkZTIxZTgyNGI4OTlhMWYzZGEyZjg5NTgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGlra2xlLWJmODZlIiwiYXVkIjoicGlra2xlLWJmODZlIiwiYXV0aF90aW1lIjoxNjIwODY3OTM3LCJ1c2VyX2lkIjoidGpJSmczRW1neWNWblVINmx0TFVrQkpWbTlJMiIsInN1YiI6InRqSUpnM0VtZ3ljVm5VSDZsdExVa0JKVm05STIiLCJpYXQiOjE2MjA4Njc5MzgsImV4cCI6MTYyMDg3MTUzOCwiZW1haWwiOiJodW5AYWVyZ28uaW8iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiaHVuQGFlcmdvLmlvIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.VyaaVgppo5K90zFFBqbB_J_6t9f1Urbmm8G1FLKSVcy7NhupIEitqRtdHQsZwecrlCT7w22sD3Z2PhxSbL-SmIWJUkOZGkD4ZmUrvZKsgOGicvQJ6F1DfA7NYm-NHmm5m_IdhNW-HkmtHyyhvbXnksPj4emJbVQEkNJi7uh-3syMxuPYgP4MSJ3KtrdVJCRDCPlz3mv72rCRSQ6ttWC0HapzZz8dP9IV28khJX3ufu3d0en-tAhDOuh3_BTLTOAJvnP8Nqvcdzi2Vu3koraxbjVoFMQF_KmWIGsV_CjUXveShEBqfrQ5NgYVEpnYBV0HYzl-DtsTxEDzzeCHBCFJvw
 </pre>
 </span>
 </div>
@@ -121,7 +233,7 @@ uid = a3sts0BSdKalEv5XNZAA99SX1lw1
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8.3</a> at 2021. 5. 12. 오후 5:32:13</p>
+<a href="http://www.gradle.org">Gradle 6.8.3</a> at 2021. 5. 13. 오후 12:41:08</p>
 </div>
 </div>
 </body>

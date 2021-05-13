@@ -37,6 +37,7 @@ public class JwtVerifyInterceptor implements HandlerInterceptor {
 
         // jwt 추출
         String jwt = jwtVerify.getJwt(request.getHeader("Authorization"));
+        // test용 role 식별자
         String type = request.getHeader("type");
         String instanceName = null;
 
