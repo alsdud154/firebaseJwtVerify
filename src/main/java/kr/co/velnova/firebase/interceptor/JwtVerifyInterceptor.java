@@ -1,5 +1,6 @@
 package kr.co.velnova.firebase.interceptor;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseToken;
@@ -36,8 +37,16 @@ public class JwtVerifyInterceptor implements HandlerInterceptor {
 
         // jwt 추출
         String jwt = jwtVerify.getJwt(request.getHeader("Authorization"));
+        String type = request.getHeader("type");
+        String instanceName = null;
 
-        FirebaseToken decodedToken = FirebaseAuth.getInstance().verifyIdToken(jwt);
+        if ("user".equals(type)) {
+            instanceName = "userFirebaseApp";
+        } else if ("admin".equals("admin")) {
+            instanceName = "adminFirebaseApp";
+        }
+
+        FirebaseToken decodedToken = FirebaseAuth.getInstance(FirebaseApp.getInstance(instanceName)).verifyIdToken(jwt);
 
         Map<String, Object> claims = decodedToken.getClaims();
 
